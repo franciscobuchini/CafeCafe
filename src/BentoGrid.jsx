@@ -12,13 +12,14 @@ export default function BentoGrid() {
   return (
     <main className='BentoGrid'>
       <Bento Bsv='3' Bsh='2' Bfd='column' Bjc='space-between' Th='Hot Drinks' Tta='left'  Iimg={CafeCafe03} Com={Button} Cjc='left'/>
-      <Bento Bsv='2' Bsh='4' Bbg='roseofsharon' Tpc='white' Tta='center' Tjc='center' />
-      <Bento Bsv='4' Bsh='2' Bfd='column' Bjc='space-between' Th='Takeaway' Tta='left'  Iimg={CafeCafe04} Com={Button} Cjc='right'/>
+      <Bento Bsv='2' Bsh='4' Bfd='column' Bjc='space-between' Th='Takeaway' Tta='left'  Iimg={CafeCafe04} Com={Button} Cjc='right'/>
+      <Bento Bsv='1' Bsh='2' Bbg='transparent' Tp='Branding Designer: Pedro Miguel Xarepe' Thc='christine' Tjc='center' Tta='center' Tpc='white' url='https://www.behance.net/gallery/108077185/Caf-Caf-Coffee'/>
+      <Bento Bsv='2' Bsh='2' Bbg='roseofsharon'/>
       <Bento Bsv='3' Bsh='4' Iimg={CafeCafe01}/>
-      <Bento Bsv='2' Bsh='2'/>
+      <Bento Bsv='2' Bsh='2' Bbg='roseofsharon'/>
+      <Bento Bsv='2' Bsh='2' Bjc='center' Com={Switch} Cjc='center'/>
       <Bento Bsv='2' Bsh='4' Bfd='column' Bjc='space-between' Iimg={CafeCafe02} Th='Cold Drinks' Com={Button} Cjc='left'/>
       <Bento Bsv='2' Bsh='4' Bfd='column' Bjc='space-between' Th='Food' Tta='left' Iimg={CafeCafe05} Com={Button} Cjc='right'/>
-      <Bento Bsv='1' Bsh='2' Bbg='transparent' Bfd='column' Bjc='center' Tp='Branding: Pedro Miguel Xarepe' Thc='christine' Tjc='start' Tta='left' Tpc='white' url='https://www.behance.net/gallery/108077185/Caf-Caf-Coffee' Com={Button} Cjc='left'/>
     </main>
     )
   }
