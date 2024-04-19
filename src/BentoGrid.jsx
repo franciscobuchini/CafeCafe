@@ -18,7 +18,7 @@ export default function BentoGrid() {
       <Bento Bsv='2' Bsh='2' Bbg='roseofsharon'/>
       <Bento Bsv='3' Bsh='4' Iimg={CafeCafe01}/>
       <Bento Bsv='2' Bsh='2' Bbg='roseofsharon'/>
-      <Bento Bsv='2' Bsh='2' Bfd='column' Bjc='center' Th='Change theme:' Tta='center' Com={ThemeSwitch}/>
+      <Bento Bsv='2' Bsh='2' Bfd='column' Bjc='center' Th='Change theme:' Tta='center' Com={ThemeSwitch} Cjc='center'/>
       <Bento Bsv='2' Bsh='4' Bfd='column' Bjc='space-between' Iimg={CafeCafe02} Th='Cold Drinks' Com={Button} Cjc='left'/>
       <Bento Bsv='2' Bsh='4' Bfd='column' Bjc='space-between' Th='Food' Tta='left' Iimg={CafeCafe05} Com={Button} Cjc='right'/>
     </main>
