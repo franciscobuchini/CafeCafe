@@ -9,30 +9,64 @@
   --white: #FFFFFF;
   --transparent: #00000000;
   --darktransparent: #14292d50;
+  --darkgold: #916e47;
+  --darkchristine: #934613;
+  --darkroseofsharon: #843112;
+  --darkhippieblue: #1b5e6d;
+  --darktaxbreak: #274847;
+  --darkmikado: #150c04;
+  --black: #000000;
 
-  background-color: var(--gold);
-  color: var(--mikado);
   font-family: -apple-system, Segoe UI, Roboto;
 }
 /* ROOT -------------------------------------------------------*/
 
-.BentoGrid {background-color: var(--mikado)}
-.Bento {background-color: var(--roseofsharon); &:hover {outline: 4px solid var(--hippieblue);}}
-.Transparent:hover {outline: none;}
+/* THEME LIGHT -------------------------------------------------------*/
+  body {background-color: var(--gold); color: var(--mikado);}
+  .BentoGrid {background-color: var(--mikado)}
+  .Bento {background-color: var(--roseofsharon); &:hover {outline: 4px solid var(--hippieblue);}}
+  .Transparent:hover {outline: none;}
 
-#Me {color: var(--roseofsharon);}
-nav {background-color: var(--mikado); color: var(--white);}
+  .Me {color: var(--roseofsharon);}
+  nav {background-color: var(--mikado); color: var(--white);}
 
-.Button, .Switch input {
-  background-color: var(--transparent); color: var(--white); outline: 2px solid var(--white);
+  .Button, .Switch input {
+    background-color: var(--transparent); color: var(--white); outline: 2px solid var(--white);
+  }
+
+  .Switch input {
+    &:checked {background-color: var(--darktransparent);}
+    &:checked::before {background-color: var(--white);}
+    &::before {background-color: var(--white);}
+  }
+
+  .Button {
+    &:hover {background-color: var(--darktransparent); color: var(--white);}
+  }
+/* THEME LIGHT -------------------------------------------------------*/
+
+/* THEME DARK -------------------------------------------------------*/
+[data-theme="dark"] {
+  body {background-color: var(--darkmikado); color: var(--white);}
+  .BentoGrid {background-color: var(--black)}
+  .Bento {background-color: var(--darkroseofsharon); &:hover {outline: 4px solid var(--darkhippieblue);}}
+  .Transparent:hover {outline: none;}
+
+  .Me {color: var(--gold);}
+  nav {background-color: var(--black); color: var(--white);}
+
+  .Button, .Switch input {
+    background-color: var(--transparent); color: var(--white); outline: 2px solid var(--darkgold);
+  }
+
+  .Switch input {
+    &:checked {background-color: var(--darktransparent);}
+    &:checked::before {background-color: var(--darkgold);}
+    &::before {background-color: var(--darkgold);}
+  }
+
+  .Button {
+    &:hover {background-color: var(--darktransparent); color: var(--white);}
+  }
 }
-
-.Switch input {
-  &:checked {background-color: var(--darktransparent);}
-  &:checked::before {background-color: var(--white);}
-  &::before {background-color: var(--white);}
-}
-
-.Button {
-  &:hover {background-color: var(--darktransparent); color: var(--white);}
-}
+/* THEME DARK -------------------------------------------------------*/

@@ -1,5 +1,6 @@
 import Bento from './Bento'
 import Switch from './Components/Switch'
+import ThemeSwitch from './Components/ThemeSwitch'
 import Button from './Components/Button'
 import CafeCafe01 from './Assets/CafeCafe01.webp'
 import CafeCafe02 from './Assets/CafeCafe02.webp'
@@ -17,7 +18,7 @@ export default function BentoGrid() {
       <Bento Bsv='2' Bsh='2' Bbg='roseofsharon'/>
       <Bento Bsv='3' Bsh='4' Iimg={CafeCafe01}/>
       <Bento Bsv='2' Bsh='2' Bbg='roseofsharon'/>
-      <Bento Bsv='2' Bsh='2' Bjc='center' Com={Switch} Cjc='center'/>
+      <Bento Bsv='2' Bsh='2' Bfd='column' Bjc='center' Th='Change theme:' Tta='center' Com={ThemeSwitch}/>
       <Bento Bsv='2' Bsh='4' Bfd='column' Bjc='space-between' Iimg={CafeCafe02} Th='Cold Drinks' Com={Button} Cjc='left'/>
       <Bento Bsv='2' Bsh='4' Bfd='column' Bjc='space-between' Th='Food' Tta='left' Iimg={CafeCafe05} Com={Button} Cjc='right'/>
     </main>
