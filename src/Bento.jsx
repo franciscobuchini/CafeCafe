@@ -44,26 +44,3 @@ export default function Bento({ Bsv, Bsh, Bst, Bbg, Url, Th, Tp, Thc, Tpc, IBimg
     </section>
   )
 }
-
-/* 
-Bsv: Bento - Size Vertical [1 to N]
-Bsh: Bento - Size Horizontal [1 to 8]
-Bst: Bento - Style [B1, B2, B3, B4, B5, B6, B7, B8]
-Bbg: Bento - Background Color
-
-Th: Text - <H2>
-Tp: Text - <P>
-Thc: Text - <H2> Color
-Tpc: Text - <P> Color
-
-IBimg: Image Back - Image
-IBalt: Image Back - Alt
-IDimg: Image Dispel - Image
-IDalt: Image Dispel - Alt
-IFimg: Image Front - Image
-IFalt: Image Front - Alt
-
-Url: Bento or Com - Link
-
-Com: Component [{Button}, {ThemeSwitch}]
-*/

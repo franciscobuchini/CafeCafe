@@ -24,25 +24,3 @@ export default function BentoGrid() {
     </main>
     )
   }
-
-{/*
-Bsv: Bento - Size Vertical
-Bsh: Bento - Size Horizontal
-Bfd: Bento - Flex Direction
-Bjc: Bento - Justify Content
-Bbg: Bento - Background Color
-Burl: Bento - Link
-
-Th: Text - <H2>
-Tp: Text - <P>
-Tjc: Text - Justify Content
-Tta: Text - Text Align
-Thc: Text - <H2> Color
-Tpc: Text - <P> Color
-
-Iimg: Image - Image
-Ialt: Image - Alt
-
-Com: Component
-Cjc: Component - Justify Content
-*/}
