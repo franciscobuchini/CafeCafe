@@ -1,12 +1,12 @@
 import React from 'react'
 
-export default function Bento({ Bsv, Bsh, Bfd, Bjc, Bbg, url, Th, Tp, Tjc, Tta, Thc, Tpc, Iimg, Ialt, Com, Cjc }) {
+export default function Bento({ Bsv, Bsh, Bst, Bbg, Url, Th, Tp, Thc, Tpc, IBimg, IBalt, IDimg, IDalt, IFimg, IFalt, Com, }) {
 
-  // If background is transparent this means: no interaction if hover the Bento.
-  const classNameBento = `Bento ${Bbg === "transparent" ? "Transparent" : ""}`
+  // If background is transparent this means: no interaction if hover the Bento and check Bsh value for Large class.
+  let classNameBento = `Bento ${Bbg === "transparent" ? "Transparent" : ""} ${Bst} ${Bsh > 4 ? " Large" : ""}`
 
   // Open link in new tab if URL exists and component is not a button
-  const link = Com !== "Button" && url ? () => window.open(url, "_blank") : undefined
+  let link = Com !== "Button" && Url ? () => window.open(Url, "_blank") : undefined
 
   return (
     <section
@@ -17,19 +17,18 @@ export default function Bento({ Bsv, Bsh, Bfd, Bjc, Bbg, url, Th, Tp, Tjc, Tta, 
         gridRow: `span ${Bsv}`,
         gridColumn: `span ${Bsh}`,
         aspectRatio: `${Bsh}/${Bsv}`,
-        flexDirection: `${Bfd}`,
-        justifyContent: `${Bjc}`,
         cursor: link ? 'pointer' : 'auto',
       }}>
 
-      {Iimg && <img className="Image" src={Iimg} alt={Ialt}/>}
+      {IBimg && <img className="Image ImageBack" src={IBimg} alt={IBalt}/>}
+      {IDimg && <img className="Image ImageDispel" src={IDimg} alt={IDalt}/>}
+      {IFimg && <img className="Image ImageFront" src={IFimg} alt={IFalt}/>}
+
 
       {(Th || Tp) && (
         <div className="Text" style={{
           height: Com ? 'auto' : '100%',
           width: Com ? 'auto' : '100%',
-          justifyContent: `${Tjc}`,
-          textAlign: `${Tta}`
         }}>
           <h2 style={{ color: `var(--${Thc})` }}>{Th}</h2>
           <p style={{ color: `var(--${Tpc})` }}>{Tp}</p>
@@ -37,9 +36,9 @@ export default function Bento({ Bsv, Bsh, Bfd, Bjc, Bbg, url, Th, Tp, Tjc, Tta, 
       )}
 
       
-      {Com && ( // Add a custom component
-        <div className='Component' style={{ justifyContent: `${Cjc}` }}>
-          {React.createElement(Com, { url })}
+      {Com && ( // Add the custom component
+        <div className='Component'>
+          {React.createElement(Com, { Url })}
         </div>
       )}
     </section>
@@ -47,23 +46,24 @@ export default function Bento({ Bsv, Bsh, Bfd, Bjc, Bbg, url, Th, Tp, Tjc, Tta, 
 }
 
 /* 
-Bsv: Bento - Size Vertical
-Bsh: Bento - Size Horizontal
-Bfd: Bento - Flex Direction
-Bjc: Bento - Justify Content
+Bsv: Bento - Size Vertical [1 to N]
+Bsh: Bento - Size Horizontal [1 to 8]
+Bst: Bento - Style [B1, B2, B3, B4, B5, B6, B7, B8]
 Bbg: Bento - Background Color
-Burl: Bento - Link
 
 Th: Text - <H2>
 Tp: Text - <P>
-Tjc: Text - Justify Content
-Tta: Text - Text Align
 Thc: Text - <H2> Color
 Tpc: Text - <P> Color
 
-Iimg: Image - Image
-Ialt: Image - Alt
+IBimg: Image Back - Image
+IBalt: Image Back - Alt
+IDimg: Image Dispel - Image
+IDalt: Image Dispel - Alt
+IFimg: Image Front - Image
+IFalt: Image Front - Alt
 
-Com: Component
-Cjc: Component - Justify Content
+Url: Bento or Com - Link
+
+Com: Component [{Button}, {ThemeSwitch}]
 */

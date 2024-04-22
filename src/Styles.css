@@ -18,8 +18,8 @@
   --size: 100px;
 }
 a {cursor: pointer; color: inherit;}
-h2 {font-size: 1.1rem;}
-p {font-size: 0.8rem;}
+h2 {font-size: 1.2rem;}
+p {font-size: 0.9rem;}
 /* NORMALIZE -----------------------------------*/
 
 /* OUTSIDE -----------------------------------*/
@@ -70,19 +70,22 @@ footer {text-align: center; padding: 60px 0 20px;}
 }
 
 .Bento {
-  /*Grid*/
+  /*Flex*/
   overflow: hidden;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 180px; /*180px most accurated*/
+  min-height: calc(var(--size) * 2);
+
   /*Design*/
   border-radius: 10px;
   transition: 0.2s;
   &:hover {
-    transform: scale(1.01);
-    >.Image {transform: scale(1.04);}
+    >.ImageBack {transform: scale(1.04);}
+    >.ImageDispel {  transition: opacity 1s; opacity: 0;}
     >.Component .Button::before{content: "See more";}
   }
 }
@@ -91,14 +94,14 @@ footer {text-align: center; padding: 60px 0 20px;}
   display: flex;
   align-items: center;
   z-index: 300;
-  padding: 5px;
+  padding: 10px;
 }
 
 .Text {
   z-index: 200;
   display: flex;
   flex-direction: column;
-  padding: 5px;
+  padding: 10px;
   overflow: hidden;
   height: 100%;
   >p {overflow: hidden;}
@@ -115,7 +118,22 @@ footer {text-align: center; padding: 60px 0 20px;}
 }
 /* BENTO -----------------------------------*/
 
+/* BENTO STYLES -----------------------------------*/
+.B1 {justify-content: flex-start;}
+.B2 {>.Component{align-self: flex-start;}}
+.B3 {>.Component{align-self: flex-end;}}
+.B4 {>.Text{text-align: right;} >.Component{align-self: flex-start;}}
+.B5 {>.Text{text-align: right;} >.Component{align-self: flex-end;}}
+.B6 {>.Text{text-align: center;} >.Component{align-self: center;}}
+.B7 {justify-content: center; >.Text{text-align: center;} >.Component{align-self: center;}}
+.B8 {justify-content: center;}
+/* BENTO STYLES -----------------------------------*/
+
 /* RESPONSIVE -----------------------------------*/
+@media (width <= 770px) {
+  .Large {grid-column: span 4 !important;} 
+}
+
 @media (width > 770px) {
   .BentoGrid {grid-template-columns: repeat(8, 1fr); margin: 0 40px;} 
   .Nav {top: auto;}
@@ -143,7 +161,12 @@ footer {text-align: center; padding: 60px 0 20px;}
   position: relative;
 }
 
-.Button {&::before {content: "➜";}}
+.Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::before {content: "➜";}
+}
 
 .Switch {
   height: calc(var(--size) / 2);

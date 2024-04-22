@@ -12,15 +12,15 @@ export default function BentoGrid() {
 
   return (
     <main className='BentoGrid'>
-      <Bento Bsv='3' Bsh='2' Bfd='column' Bjc='space-between' Th='Hot Drinks' Tta='left'  Iimg={CafeCafe03} Com={Button} Cjc='left'/>
-      <Bento Bsv='2' Bsh='4' Bfd='column' Bjc='space-between' Th='Takeaway' Tta='left'  Iimg={CafeCafe04} Com={Button} Cjc='right'/>
-      <Bento Bsv='1' Bsh='2' Bbg='transparent' Tp='Branding Designer: Pedro Miguel Xarepe' Thc='christine' Tjc='center' Tta='center' Tpc='white' url='https://www.behance.net/gallery/108077185/Caf-Caf-Coffee'/>
+      <Bento Bsv='3' Bsh='2' Bst='B3' Th='Hot Drinks' IBimg={CafeCafe03} Com={Button}/>
+      <Bento Bsv='2' Bsh='4' Bst='B3' Th='Takeaway' IBimg={CafeCafe04} Com={Button}/>
+      <Bento Bsv='1' Bsh='2' Bst='B4' Bbg='transparent' Tp='Branding Designer: Pedro Miguel Xarepe' Thc='christine' Tpc='white' Url='https://www.behance.net/gallery/108077185/Caf-Caf-Coffee'/>
       <Bento Bsv='2' Bsh='2' Bbg='roseofsharon'/>
-      <Bento Bsv='3' Bsh='4' Iimg={CafeCafe01}/>
+      <Bento Bsv='3' Bsh='4' IBimg={CafeCafe01}/>
       <Bento Bsv='2' Bsh='2' Bbg='roseofsharon'/>
-      <Bento Bsv='2' Bsh='2' Bfd='column' Bjc='center' Th='Change theme:' Tta='center' Com={ThemeSwitch} Cjc='center'/>
-      <Bento Bsv='2' Bsh='4' Bfd='column' Bjc='space-between' Iimg={CafeCafe02} Th='Cold Drinks' Com={Button} Cjc='left'/>
-      <Bento Bsv='2' Bsh='4' Bfd='column' Bjc='space-between' Th='Food' Tta='left' Iimg={CafeCafe05} Com={Button} Cjc='right'/>
+      <Bento Bsv='2' Bsh='2' Bst='B7' Th='Change theme:' Com={ThemeSwitch}/>
+      <Bento Bsv='2' Bsh='4' Bst='B2' Th='Cold Drinks' IBimg={CafeCafe02} Com={Button}/>
+      <Bento Bsv='2' Bsh='4' Bst='B3' Th='Food' IBimg={CafeCafe05} Com={Button}/>
     </main>
     )
   }
