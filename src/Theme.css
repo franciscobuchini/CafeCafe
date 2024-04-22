@@ -1,11 +1,17 @@
 /* ROOT -------------------------------------------------------*/
 :root {
   --gold: #F2C491;
+  --lightgold: #F5D3AD;
   --christine: #D6661A;
+  --lightchristine: #E08C53;
   --roseofsharon: #BA441A;
+  --lightroseofsharon:#E08C53;
   --hippieblue: #2C8396;
+  --lighthippieblue: #61A2B0;
   --taxbreak: #426B6A;
+  --lighttaxbreak: #71908F;
   --mikado: #37230F;
+  --lightmikado: #695A4B;
   --white: #FFFFFF;
   --transparent: #00000000;
   --darktransparent: #14292d50;
@@ -22,12 +28,12 @@
 /* ROOT -------------------------------------------------------*/
 
 /* THEME LIGHT -------------------------------------------------------*/
-  body {background-color: var(--gold); color: var(--mikado);}
+  body {background-color: var(--lightgold); color: var(--mikado);}
   .BentoGrid {background-color: var(--mikado)}
-  .Bento {background-color: var(--roseofsharon); &:hover {outline: 4px solid var(--hippieblue);}}
+  .Bento {background-color: var(--christine); &:hover {outline: 4px solid var(--taxbreak);}}
   .Transparent:hover {outline: none;}
 
-  .Me {color: var(--roseofsharon);}
+  .Me {color: var(--taxbreak);}
   nav {background-color: var(--mikado); color: var(--white);}
 
   .Button, .Switch input {
@@ -48,21 +54,20 @@
 /* THEME DARK -------------------------------------------------------*/
 [data-theme="dark"] {
   body {background-color: var(--darkmikado); color: var(--white);}
-  .BentoGrid {background-color: var(--black)}
-  .Bento {background-color: var(--darkroseofsharon); &:hover {outline: 4px solid var(--darkhippieblue);}}
+  .BentoGrid {background-color: var(--darkmikado)}
+  .Bento {background-color: var(--mikado); &:hover {outline: 4px solid var(--gold);}}
   .Transparent:hover {outline: none;}
 
   .Me {color: var(--gold);}
   nav {background-color: var(--mikado); color: var(--white);}
 
   .Button, .Switch input {
-    background-color: var(--transparent); color: var(--white); outline: 2px solid var(--darkgold);
+    background-color: var(--transparent); color: var(--white); outline: 2px solid var(--christine);
   }
 
   .Switch input {
     &:checked {background-color: var(--darktransparent);}
-    &:checked::before {background-color: var(--darkgold);}
-    &::before {background-color: var(--darkgold);}
+    &:checked::before {background-color: var(--christine);}
   }
 
   .Button {
