@@ -9,6 +9,7 @@ export default function Header () {
           <ul><a>Food</a></ul>
           <ul><a>Takeaway</a></ul>
           <ul><a>Cold Drinks</a></ul>
+          <ul><a>Store</a></ul>
         </li>
       </nav>
       <div>
