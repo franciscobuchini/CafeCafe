@@ -27,7 +27,7 @@ p {font-size: 0.9rem;}
 /* OUTSIDE -----------------------------------*/
 header {
   position: relative;
-  width: 94%;
+  width: 100%;
   display: flex;
   padding: 20px;
   place-items: center;
@@ -55,7 +55,7 @@ footer {
   text-align: center;
   padding: 60px 0 20px;
   height: fit-content;
-  width: 94%;
+  width: 100%;
 }
 .Me{font-weight: 600;}
 /* OUTSIDE -----------------------------------*/
@@ -64,7 +64,7 @@ footer {
 .BentoGrid {
   /*Grid*/
   display: grid;
-  width: 94%;
+  width: 100%;
   height: max-content;
   flex-direction: row;
   grid-template-columns: repeat(4, 1fr);
