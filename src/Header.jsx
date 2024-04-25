@@ -4,13 +4,13 @@ export default function Header () {
     <header>
       <img src={Logo}/>
       <nav className='Nav'>
-        <li>
-          <ul><a>Hot Drinks</a></ul>
-          <ul><a>Food</a></ul>
-          <ul><a>Takeaway</a></ul>
-          <ul><a>Cold Drinks</a></ul>
-          <ul><a>Store</a></ul>
-        </li>
+        <ul>
+          <li><a>Hot Drinks</a></li>
+          <li><a>Food</a></li>
+          <li><a>Takeaway</a></li>
+          <li><a>Cold Drinks</a></li>
+          <li><a>Store</a></li>
+        </ul>
       </nav>
       <div>
         <p className='CreatedBy'>Created by </p>
