@@ -1,77 +1,64 @@
 /* ROOT -------------------------------------------------------*/
 :root {
-  --gold: #F2C491;
-  --lightgold: #F5D3AD;
-  --christine: #D6661A;
-  --lightchristine: #E08C53;
-  --roseofsharon: #BA441A;
-  --lightroseofsharon:#E08C53;
-  --hippieblue: #2C8396;
-  --lighthippieblue: #61A2B0;
-  --taxbreak: #426B6A;
-  --lighttaxbreak: #71908F;
-  --mikado: #37230F;
-  --lightmikado: #695A4B;
-  --white: #FFFFFF;
-  --transparent: #00000000;
-  --darktransparent: #14292d50;
-  --darkgold: #916e47;
-  --darkchristine: #934613;
-  --darkroseofsharon: #843112;
-  --darkhippieblue: #1b5e6d;
-  --darktaxbreak: #274847;
-  --darkmikado: #150c04;
-  --black: #000000;
+  --primarylight: #2C8396;
+  --primarydark: #274847;
+  --secondarylight: #BA441A;
+  --secondarydark: #843112;
+  --light: #fdf0d5;
+  --dark: #37230F;
 
+  --white: #FAFAFA;
+  --black: #1E1E1E;
+  --darktransparent: #0000002c;
+  --transparent: #00000000;
+ 
   font-family: -apple-system, Segoe UI, Roboto;
 }
 /* ROOT -------------------------------------------------------*/
 
 /* THEME LIGHT -------------------------------------------------------*/
-  body {background-color: var(--lightgold); color: var(--white);}
-  .BentoGrid {background-color: var(--mikado)}
-  .Bento {background-color: var(--mikado); &:hover {outline: 4px solid var(--lightgold);}}
+  body {background-color: var(--light); color: var(--light);}
+  .BentoGrid {background-color: var(--darktransparent)}
+  .Bento {background-color: var(--primarylight); &:hover {outline: 4px solid var(--primarylight);}}
   .Transparent:hover {outline: none;}
 
-  .Me {color: var(--christine);}
-  nav {background-color: var(--mikado); color: var(--white);}
+  .CreatedBy {color: var(--dark);}
+  .Me {color: var(--secondarylight);}
+  nav {background-color: var(--darktransparent); color: var(--primarydark);}
+
 
   .Button, .Switch input {
-    background-color: var(--transparent); color: var(--white); outline: 2px solid var(--white);
+    background-color: var(--darktransparent); color: var(--light); outline: 2px solid var(--light);
+    &:hover {background-color: var(--darktransparent); color: var(--white); outline: 4px solid var(--light)}
   }
 
   .Switch input {
-    &:checked {background-color: var(--darktransparent);}
-    &:checked::before {background-color: var(--white);}
-    &::before {background-color: var(--white);}
-  }
-
-  .Button {
-    &:hover {background-color: var(--darktransparent); color: var(--white);}
+    &:checked {background-color: var(--primarylight);}
+    &:checked::before {background-color: var(--primarydark);}
+    &::before {background-color: var(--light);}
+    &:hover::before {background-color: var(--primarylight);}
+    
   }
 /* THEME LIGHT -------------------------------------------------------*/
 
 /* THEME DARK -------------------------------------------------------*/
 [data-theme="dark"] {
-  body {background-color: var(--darkmikado); color: var(--white);}
-  .BentoGrid {background-color: var(--darkmikado)}
-  .Bento {background-color: var(--mikado); &:hover {outline: 4px solid var(--darkroseofsharon);}}
+  body {background-color: var(--black); color: var(--white);}
+  .BentoGrid {background-color: var(--darktransparent)}
+  .Bento {background-color: var(--primarydark); &:hover {outline: 4px solid var(--secondarydark);}}
   .Transparent:hover {outline: none;}
 
-  .Me {color: var(--gold);}
-  nav {background-color: var(--mikado); color: var(--white);}
+  .CreatedBy {color: var(--light);}
+  .Me {color: var(--secondarylight);}
+  nav {background-color: var(--darktransparent); color: var(--light);}
+  h2 {color: var(--secondarylight);}
 
   .Button, .Switch input {
-    background-color: var(--transparent); color: var(--lightgold); outline: 2px solid var(--lightgold);
-  }
-
-  .Switch input {
+    background-color: var(--transparent); color: var(--white); outline: 2px solid var(--white);
+    &:hover {background-color: var(--darktransparent); color: var(--white); outline: 4px solid var(--white)}
     &:checked {background-color: var(--darktransparent);}
-    &:checked::before {background-color: var(--lightgold);}
-  }
-
-  .Button {
-    &:hover {background-color: var(--darktransparent); color: var(--white);}
+    &:checked::before {background-color: var(--white);}
+    &:hover:checked::before {background-color: var(--secondarylight);}
   }
 }
 /* THEME DARK -------------------------------------------------------*/

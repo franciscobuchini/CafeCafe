@@ -13,7 +13,7 @@ export default function Header () {
         </li>
       </nav>
       <div>
-        <p>Created by </p>
+        <p className='CreatedBy'>Created by </p>
         <a className='Me' href='https://franciscobuchini.vercel.app/' target="_blank">Francisco Buchini</a>
       </div>
     </header>
