@@ -176,6 +176,7 @@ footer {
 }
 
 .Switch {
+  overflow: hidden;
   height: calc(var(--size) / 2);
   >input{
     &::before {
