@@ -19,7 +19,7 @@
 a {cursor: pointer; color: inherit;}
 h2 {font-size: 1.2rem;}
 p {font-size: 0.9rem;}
-body {height: fit-content;}
+body {height: min-content;}
 /* NORMALIZE -----------------------------------*/
 
 /* OUTSIDE -----------------------------------*/
