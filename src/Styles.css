@@ -14,18 +14,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: min-content;
+  width: 100%;
   --size: 100px;
 }
 a {cursor: pointer; color: inherit;}
 h2 {font-size: 1.2rem;}
 p {font-size: 0.9rem;}
-body {height: min-content;}
 /* NORMALIZE -----------------------------------*/
 
 /* OUTSIDE -----------------------------------*/
 header {
   position: relative;
-  width: 100%;
+  width: 98%;
   display: flex;
   padding: 20px;
   place-items: center;
@@ -49,7 +50,12 @@ header {
   }
 }
 
-footer {text-align: center; padding: 60px 0 20px;}
+footer {
+  text-align: center;
+  padding: 60px 0 20px;
+  height: fit-content;
+  width: 98%;
+}
 .Me{font-weight: 600;}
 /* OUTSIDE -----------------------------------*/
 
@@ -57,7 +63,7 @@ footer {text-align: center; padding: 60px 0 20px;}
 .BentoGrid {
   /*Grid*/
   display: grid;
-  width: 100%;
+  width: 98%;
   height: max-content;
   flex-direction: row;
   grid-template-columns: repeat(4, 1fr);
