@@ -23,7 +23,7 @@
   .Transparent:hover {outline: none;}
 
   .CreatedBy {color: var(--dark);}
-  .Me {color: var(--secondarylight);}
+  .Me {color: var(--primarylight);}
   nav {background-color: var(--darktransparent); color: var(--primarydark);}
 
 
