@@ -18,7 +18,7 @@ export default function BentoGrid() {
       <Bento Bsv='1' Bsh='2' Bst='B9' Bbg='transparent' Tp='Branding Designer: Pedro Miguel Xarepe' Lurl='https://www.behance.net/gallery/108077185/Caf-Caf-Coffee' rel="nofollow"/>
       <Bento Bsv='4' Bsh='2' Bst='B2' Th='Store' IBimg={IB02} Com={Button}/>
       <Bento Bsv='3' Bsh='4' IBimg={IB01} IFimg={IF01}/>
-      <Bento Bsv='2' Bsh='2' Bst='B7' Bbg='roseofsharon' Th='Change theme:' Com={ThemeSwitch}/>
+      <Bento Bsv='2' Bsh='2' Bst='B7' Bbg='transparent' Th='Change theme:' Com={ThemeSwitch}/>
       <Bento Bsv='2' Bsh='4' Bst='B5' Th='Cold Drinks' IBimg={IB03} Com={Button}/>
       <Bento Bsv='2' Bsh='4' Bst='B3' Th='Food' IBimg={IB06} Com={Button}/>
     </main>
